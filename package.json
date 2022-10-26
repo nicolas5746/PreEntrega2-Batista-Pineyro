@@ -1,21 +1,40 @@
 {
   "name": "pre-entrega-2-batista-pineyro",
-  "version": "0.1.0",
+  "version": "2.0.0",
+  "author": "Nicolás Batista Piñeyro",
   "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "npm run clean && react-scripts build",
+    "clean": "del-cli --force ./build",
+    "eject": "react-scripts eject",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
+  },
   "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@headlessui/react": "^1.7.3",
+    "@heroicons/react": "^2.0.12",
+    "@mui/icons-material": "^5.10.9",
+    "@mui/material": "^5.10.10",
+    "@mui/styled-engine-sc": "^5.10.6",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.2",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "styled-components": "^5.3.6"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "del-cli": "^5.0.0",
+    "postcss": "^8.4.18",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.2.1"
   },
   "eslintConfig": {
     "extends": [
