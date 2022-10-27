@@ -1,7 +1,7 @@
-# Pre Entrega 1 Nicolás Batista Piñeyro
+# Pre Entrega 2 Nicolás Batista Piñeyro
 `CoderHouse - React.js`
 
-[Netlify Production](https://preentrega2.netlify.app/)
+[Deployed in Netlify](https://preentrega2nicolasbatista.netlify.app/)
 
 ## Available Scripts
 
