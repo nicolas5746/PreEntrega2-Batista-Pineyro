@@ -1,20 +1,12 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-//import ItemDetailContainer from 'components/home/itemDetailContainer/ItemDetailContainer';
-import { getProductById } from 'data/getProducts';
+import { Link } from 'react-router-dom';
+import ItemDetailContainer from 'components/home/itemDetailContainer/ItemDetailContainer';
 
-const Product = () => {
-    const { productId } = useParams();
 
-    const [product, setProduct] = React.useState({});
-
-    React.useEffect(() => {
-        setProduct(getProductById(productId));
-    }, []);
-    
+const Product = () => {  
     return (
         <div>
-            {productId}
+            <ItemDetailContainer />
 
             <Link to='/'>Volver atrás</Link>
         </div>
