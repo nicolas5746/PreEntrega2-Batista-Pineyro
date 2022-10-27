@@ -44,7 +44,7 @@ const NavBar = ({ title, logoSrc, logoAlt, logoTitle }) => {
                                         .map((item) => (
                                             <Link
                                                 key={item.name}
-                                                to={`/sortBy/${item.name}`}
+                                                to={`/category/${item.name}`}
                                                 className={classNames(
                                                     item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-red-700 hover:text-white',
                                                     'px-3 py-2 rounded-md text-sm font-medium md:capitalize'
@@ -69,7 +69,7 @@ const NavBar = ({ title, logoSrc, logoAlt, logoTitle }) => {
                             {items.map((item) => (
                                 <Link
                                     key={item.name}
-                                    to={`/sortBy/${item.name}`}
+                                    to={`/category/${item.name}`}
                                     className={classNames(
                                         item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                         'block px-3 py-2 rounded-md text-base font-medium'

@@ -1,12 +1,22 @@
-import ItemDetailContainer from 'components/home/itemDetailContainer/ItemDetailContainer';
-import { useParams } from 'react-router-dom';
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+//import ItemDetailContainer from 'components/home/itemDetailContainer/ItemDetailContainer';
+import { getProductById } from 'data/getProducts';
 
 const Product = () => {
-    const { id } = useParams();
+    const { productId } = useParams();
+
+    const [product, setProduct] = React.useState({});
+
+    React.useEffect(() => {
+        setProduct(getProductById(productId));
+    }, []);
+    
     return (
-        <div className='product'>
-            {id}
-            <ItemDetailContainer />
+        <div>
+            {productId}
+
+            <Link to='/'>Volver atrás</Link>
         </div>
     );
 }

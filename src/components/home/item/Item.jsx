@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const Item = ({ id, brand, name, imageSrc, gender, price, colour }) => {
+const Item = ({ id, brand, name, imageSrc, category, price, colour }) => {
     return (
         <div className='group relative'>
             <Link to={`/product/${id}`}>
@@ -17,7 +17,7 @@ const Item = ({ id, brand, name, imageSrc, gender, price, colour }) => {
                 <h2 className='text-xl md:capitalize'>{brand}</h2>
                 <p className='text-ml md:capitalize'>{name}</p>
                 <p className='mt-1 text-sm md:capitalize'>Color: {colour}</p>
-                <p className='mt-2 text-sm md:capitalize'>{gender}</p>
+                <p className='mt-2 text-sm md:capitalize'>{category}</p>
                 <p className='text-xl'>USD {price}</p>
                 <p className='mt-1 text-sm'>{`Código del artículo: ${id}`}</p>
             </div>

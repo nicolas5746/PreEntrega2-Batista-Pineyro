@@ -1,7 +1,8 @@
+import React from 'react';
 import ItemDetail from 'components/home/itemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
-    return(
+    return (
         <div className='itemDetailContainer'>
             <ItemDetail />
         </div>
