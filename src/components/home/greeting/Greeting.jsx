@@ -1,3 +1,5 @@
+import './Greeting.sass';
+
 const Greeting = ({ greeting }) => {
     const greetingStyle = {
         border: '0.1em',

@@ -6,6 +6,7 @@ import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import './ItemCount.sass';
 
 const ItemCount = ({ addToCart, stock }) => {
     const [itemCount, setItemCount] = React.useState(0)

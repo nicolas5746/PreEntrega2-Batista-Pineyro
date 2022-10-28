@@ -1,8 +1,9 @@
 import ItemList from 'components/home/itemList/ItemList';
+import './ItemListContainer.sass';
 
 const ItemListContainer = () => {
     return (
-        <div className='bg-white'>
+        <div className='itemListContainer'>
             <ItemList />
         </div>
     );

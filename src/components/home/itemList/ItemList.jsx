@@ -1,8 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getAllProducts } from 'data/getProducts';
-import Greeting from 'components/ui/greeting/Greeting';
+import { getAllProducts } from 'data/getData';
+import Greeting from 'components/home/greeting/Greeting';
 import Item from 'components/home/item/Item';
+import Search from '../search/Search';
+import './ItemList.sass';
 
 const ItemList = () => {
     const [products, setProducts] = React.useState([]);
@@ -16,15 +18,7 @@ const ItemList = () => {
     return (
         <div className='mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
             <Greeting greeting={`Bienvenidos a Tienda Americana de Calzados`} />
-            <div>
-                <label for='filter'>Buscar</label>
-                <input
-                    id='filter'
-                    name='filter'
-                    type='text'
-                    value={filter}
-                    onChange={(event) => setFilter(event.target.value)} />
-            </div>
+            <Search filter={filter} setFilter={setFilter}/>
             <div className='mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
                 {sortBy
                     ?
@@ -39,9 +33,6 @@ const ItemList = () => {
                                 name={product.name}
                                 imageSrc={product.image}
                                 price={product.priceUSD}
-                                colour={product.colour}
-                                category={product.category}
-                                stock={product.stock}
                             />)
                     :
                     products
@@ -54,9 +45,6 @@ const ItemList = () => {
                                 name={product.name}
                                 imageSrc={product.image}
                                 price={product.priceUSD}
-                                colour={product.colour}
-                                category={product.category}
-                                stock={product.stock}
                             />)
                 }
             </div>

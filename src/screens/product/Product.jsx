@@ -1,15 +1,20 @@
 import React from 'react';
-import { useParams, Link } from 'react-router-dom';
-import ItemDetailContainer from 'components/home/itemDetailContainer/ItemDetailContainer';
+import { useParams } from 'react-router-dom';
+import { getProductById } from 'data/getData';
+import ItemDetailContainer from 'components/product/itemDetailContainer/ItemDetailContainer';
 
 const Product = () => {
+    const [product, setProduct] = React.useState([]);
+
     let { id } = useParams();
-    id = parseInt(id);
+
+    React.useEffect(() => {
+        getProductById(parseInt(id), setProduct);
+    }, [id]);
 
     return (
         <div>
-            <ItemDetailContainer id={id} />
-            <Link to='/'>Volver</Link>
+            <ItemDetailContainer id={id} product={product} />
         </div>
     );
 }
