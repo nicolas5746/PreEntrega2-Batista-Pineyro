@@ -5,10 +5,11 @@ const getProducts = () => {
     return new Promise((resolve, reject) => {
         if (products.length === 0) {
             reject(new Error(`No se encontraron productos!`));
+        } else {
+            setTimeout(() => {
+                resolve(products);
+            }, 2000);
         }
-        setTimeout(() => {
-            resolve(products);
-        }, 2000);
     });
 }
 
@@ -36,11 +37,10 @@ export const getProductById = async (id, productId) => {
 const getItems = () => {
     return new Promise((resolve, reject) => {
         if (navbar.length === 0) {
-            reject(new Error());
-        }
-        setTimeout(() => {
+            reject(new Error(`Error!`));
+        } else {
             resolve(navbar);
-        });
+        }
     });
 }
 
@@ -50,5 +50,6 @@ export const navbarItems = async (item) => {
         item(navbar);
     }
     catch (error) {
+        new Error(`Error!`);
     }
 }
