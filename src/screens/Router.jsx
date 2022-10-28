@@ -9,7 +9,7 @@ const Router = () => {
                 <Routes>
                     <Route path='/' element={<Home />}></Route>
                     <Route path='/category/:sortBy' element={<Home />}></Route>
-                    <Route path='/product/:productId' element={<Product />}></Route>
+                    <Route path='/product/:id' element={<Product />}></Route>
                     <Route path='/*' element={<div>404 Not Found</div>}></Route>
                 </Routes>
             </BrowserRouter>

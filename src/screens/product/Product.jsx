@@ -1,14 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import ItemDetailContainer from 'components/home/itemDetailContainer/ItemDetailContainer';
 
+const Product = () => {
+    let { id } = useParams();
+    id = parseInt(id);
 
-const Product = () => {  
     return (
         <div>
-            <ItemDetailContainer />
-
-            <Link to='/'>Volver atrás</Link>
+            <ItemDetailContainer id={id} />
+            <Link to='/'>Volver</Link>
         </div>
     );
 }
