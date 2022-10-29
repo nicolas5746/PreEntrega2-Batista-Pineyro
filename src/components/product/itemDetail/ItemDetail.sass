@@ -1,0 +1,51 @@
+@use 'assets/styles/colours'
+@use 'assets/styles/fonts'
+
+.itemDetail
+    align-items: center
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 8%
+
+.card
+    background-color: colours.$gainsboro
+    padding: 3%
+
+.mt-1
+    color: colours.$roman-silver
+
+.mt-2
+    color: colours.$red-blood
+
+.text-ml
+    color: colours.$tomato-sauce-red
+
+.text-xl
+    color: colours.$windows-blue
+    font-size: 1.5rem
+    padding: 1%
+
+.continueBuying
+    background-color: colours.$gainsboro
+    border: 0.1em solid colours.$windows-blue
+    color: colours.$windows-blue
+    display: block
+    font-family: fonts.$poppins
+    font-size: 0.8rem
+    margin: 0 auto
+    padding: 1%
+    text-align: center
+    width: 75%
+
+@media screen and (max-width: 649px)
+    .itemDetail
+        padding: 25%
+
+@media screen and (min-width: 650px) and (max-width: 849px)
+    .itemDetail
+        padding: 12%
+
+@media screen and (min-width: 850px) and (max-width: 1200px)
+    .itemDetail
+        padding: 10%

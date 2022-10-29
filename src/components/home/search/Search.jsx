@@ -1,7 +1,7 @@
 import React from 'react';
 import './Search.sass';
 
-const Search = ({ filter, setFilter }) => {
+const Search = ({ filter, setFilter, search, placeholder }) => {
 
     const onChange = (event) => {
         setFilter(event.target.value)
@@ -9,11 +9,12 @@ const Search = ({ filter, setFilter }) => {
 
     return (
         <div className="search">
-            <label for='filter'>Buscar</label>
+            <label for='filter'>{search}</label>
             <input
                 id='filter'
                 name='filter'
                 type='text'
+                placeholder={placeholder}
                 value={filter}
                 onChange={onChange} />
         </div>

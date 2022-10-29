@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import './Item.sass';
 
-const Item = ({ id, brand, name, imageSrc, price}) => {
+const Item = ({ id, brand, name, imageSrc, currency, price }) => {
     return (
         <div className='group relative'>
             <Link to={`/product/${id}`}>
@@ -17,7 +17,7 @@ const Item = ({ id, brand, name, imageSrc, price}) => {
             <div className='mt-4 flex justify-between'>
                 <h2 className='text-xl md:capitalize'>{brand}</h2>
                 <p className='text-ml md:capitalize'>{name}</p>
-                <p className='text-xl'>USD {price}</p>
+                <p className='text-xl md:uppercase' >{currency} {price}</p>
             </div>
         </div>
     );

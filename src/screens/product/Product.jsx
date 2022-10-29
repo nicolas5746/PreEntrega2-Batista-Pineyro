@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import { getProductById } from 'data/getData';
 import ItemDetailContainer from 'components/product/itemDetailContainer/ItemDetailContainer';
+import './Product.sass';
 
 const Product = () => {
     const [product, setProduct] = React.useState([]);

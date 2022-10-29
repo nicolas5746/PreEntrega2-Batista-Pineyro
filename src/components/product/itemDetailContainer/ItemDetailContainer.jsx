@@ -4,7 +4,14 @@ import './ItemDetailContainer.sass';
 const ItemDetailContainer = ({ product }) => {
     return (
         <div className='itemDetailContainer'>
-            <ItemDetail product={product} />
+            <ItemDetail
+                product={product}
+                colour={`color:`}
+                currency={`usd`}
+                articleCode={`Código del artículo:`}
+                stockAvailable={`Stock disponible:`}
+                continueBuying={`continuar comprando`}
+            />
         </div>
     );
 }
