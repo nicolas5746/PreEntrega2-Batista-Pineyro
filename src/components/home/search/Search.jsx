@@ -2,8 +2,7 @@ import React from 'react';
 import './Search.sass';
 
 const Search = ({ filter, setFilter, search, placeholder }) => {
-
-    const onChange = (event) => {
+    let onChange = (event) => {
         setFilter(event.target.value)
     };
 
