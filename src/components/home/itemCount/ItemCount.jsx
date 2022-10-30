@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Badge from '@mui/material/Badge';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
@@ -24,25 +25,27 @@ const ItemCount = ({ addToCart, stock }) => {
     return (
         <div className='button'>
             <ButtonGroup>
-                <Button variant='contained'
+                <Button color='primary' variant='contained'
                     onClick={handleSubtraction}
                 >
                     {' '}
                     <RemoveIcon fontSize='smaller' />
                 </Button>
-                <Button variant='outlined' fontSize='smaller'>{addToCart}</Button>
-                <Button variant='contained'
+                <Button color='primary' variant='outlined' fontSize='smaller'>{addToCart}</Button>
+                <Button color='primary' variant='contained'
                     onClick={handleSum}
                 >
                     {' '}
                     <AddIcon fontSize='smaller' />
                 </Button>
             </ButtonGroup>
-            <Badge color='primary' badgeContent={itemCount}>
-                <IconButton color='primary' aria-label='add to cart'>
-                    <AddShoppingCartIcon />
-                </IconButton>
-            </Badge>
+            <Link to={`/cart`}>
+                <Badge color='error' badgeContent={itemCount}>
+                    <IconButton color='primary' aria-label='add to cart'>
+                        <AddShoppingCartIcon color='primary' />
+                    </IconButton>
+                </Badge>
+            </Link>
         </div>
     );
 }

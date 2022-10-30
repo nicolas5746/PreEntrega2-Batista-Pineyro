@@ -32,9 +32,18 @@ body
     font-family: fonts.$lato
     font-size: 1rem
     margin: 0 auto
-    padding: 1%
+    padding: 0.5%
     text-align: center
     width: 10%
+    &:link
+        color: colours.$windows-blue
+    &:visited
+        color: colours.$medium-blue
+    &:hover
+        background-color: colours.$dark-white
+        color: colours.$royal-blue
+    &:active
+        color: colours.$blue-whale
 
 @media screen and (max-width: 850px)
     .backHome

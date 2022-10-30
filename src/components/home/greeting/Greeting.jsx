@@ -1,7 +1,7 @@
 import './Greeting.sass';
 
 const Greeting = ({ greeting }) => {
-    const greetingStyle = {
+    let greetingStyle = {
         border: '0.1em',
         borderRadius: '0.5em',
         color: 'transparent',
@@ -12,7 +12,13 @@ const Greeting = ({ greeting }) => {
     };
 
     return (
-        <h1 id='greeting' className='text-2xl font-bold tracking-tight text-gray-900' style={greetingStyle}>{greeting}</h1>
+        <h1
+            id='greeting'
+            className='text-2xl font-bold tracking-tight text-gray-900'
+            style={greetingStyle}
+        >
+            {greeting}
+        </h1>
     );
 }
 

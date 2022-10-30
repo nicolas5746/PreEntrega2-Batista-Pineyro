@@ -4,7 +4,6 @@ import { getAllProducts } from 'data/getData';
 import Greeting from 'components/home/greeting/Greeting';
 import Item from 'components/home/item/Item';
 import Search from 'components/home/search/Search';
-
 import './ItemList.sass';
 
 const ItemList = () => {
