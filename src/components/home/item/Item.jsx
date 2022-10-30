@@ -15,9 +15,9 @@ const Item = ({ id, brand, name, imageSrc, currency, price }) => {
                 </div>
             </Link >
             <div className='mt-4 flex justify-between'>
-                <h2 className='text-xl md:capitalize'>{brand}</h2>
-                <p className='text-ml md:capitalize'>{name}</p>
-                <p className='text-xl md:uppercase' >{currency} {price}</p>
+                <h2 className='brand'>{brand}</h2>
+                <p className='name'>{name}</p>
+                <p className='price' >{currency} {price}</p>
             </div>
         </div>
     );

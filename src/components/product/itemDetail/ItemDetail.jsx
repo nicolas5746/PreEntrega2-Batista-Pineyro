@@ -16,13 +16,13 @@ const ItemDetail = ({ product, colour, currency, articleCode, stockAvailable, co
                     />
                 </div>
                 <div className='mt-4 flex justify-between'>
-                    <h2 className='text-xl md:capitalize'>{product.brand}</h2>
-                    <p className='text-ml md:capitalize'>{product.name}</p>
-                    <p className='mt-1 text-sm md:capitalize'>{colour} {product.colour}</p>
-                    <p className='mt-2 text-sm md:capitalize'>{product.category}</p>
-                    <p className='text-xl md:uppercase'>{currency} {product.priceUSD}</p>
-                    <p className='mt-1 text-sm'>{articleCode} {`${product.id}`}</p>
-                    <p className='mt-1 text-sm'>{stockAvailable} {product.stock}</p>
+                    <h2 className='brand'>{product.brand}</h2>
+                    <p className='name'>{product.name}</p>
+                    <p className='colour'>{colour} {product.colour}</p>
+                    <p className='category'>{product.category}</p>
+                    <p className='price'>{currency} {product.priceUSD}</p>
+                    <p className='code'>{articleCode} {`${product.id}`}</p>
+                    <p className='stock'>{stockAvailable} {product.stock}</p>
                 </div>
                 <ItemCount addToCart={`agregrar al carrito`} stock={product.stock} />
                 <div className='continueBuying'>
