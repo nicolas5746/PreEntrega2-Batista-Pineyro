@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
 import './NotFound.sass';
 
-const NotFound = () => {
-    let backToHome = `Volver`;
+const NotFound = ({ backToHome }) => {
     return (
         <div className='notFound'>
             <h1>404</h1>

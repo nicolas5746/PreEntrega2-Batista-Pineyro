@@ -20,7 +20,7 @@ const Router = () => {
                     <Route path={`/category/:sortBy`} element={<Home />} />
                     <Route path={`/product/:id`} element={<Product />} />
                     <Route path={`/cart`} element={<Cart />} />
-                    <Route path={`/*`} element={<NotFound />} />
+                    <Route path={`/*`} element={<NotFound backToHome={`Volver`} />} />
                 </Routes>
             </BrowserRouter>
         </div>
