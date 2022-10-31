@@ -1,4 +1,4 @@
-export const navBar = [
+export const navbar = [
     { name: 'dama' },
     { name: 'caballero' },
     { name: 'unisex' },

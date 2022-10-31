@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NavBar from 'components/ui/navbar/NavBar';
+import Navbar from 'components/ui/navbar/Navbar';
 import Home from 'screens/home/Home';
 import Product from 'screens/product/Product';
 import Cart from 'screens/cart/Cart';
@@ -9,7 +9,7 @@ const Router = () => {
     return (
         <div>
             <BrowserRouter>
-                <NavBar
+                <Navbar
                     title={`Tienda Americana`}
                     logoSrc={`https://raw.githubusercontent.com/nicolas5746/PreEntrega1-Batista-Pineyro/master/public/images/logo.png`}
                     logoAlt={`Tienda Americana`}

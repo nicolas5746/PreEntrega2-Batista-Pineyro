@@ -1,4 +1,4 @@
-import { navBar } from 'data/navBar';
+import { navbar } from 'data/navbar';
 import { products } from 'data/products';
 
 const getProducts = () => {
@@ -34,20 +34,20 @@ export const getProductById = async (id, productId) => {
     }
 }
 
-const getNavBar = () => {
+const getNavbar = () => {
     return new Promise((resolve, reject) => {
-        if (navBar.length === 0) {
+        if (navbar.length === 0) {
             reject(new Error(`Error!`));
         } else {
-            resolve(navBar);
+            resolve(navbar);
         }
     });
 }
 
-export const getNavBarItems = async (item) => {
+export const getNavbarItems = async (item) => {
     try {
-        const navBar = await getNavBar();
-        item(navBar);
+        const navbar = await getNavbar();
+        item(navbar);
     }
     catch (error) {
         new Error(`Error!`);

@@ -2,19 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Disclosure, Menu } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { getNavBarItems } from 'data/getData';
+import { getNavbarItems } from 'data/getData';
 import CartWidget from 'components/ui/cartWidget/CartWidget';
-import './NavBar.sass';
+import './Navbar.sass';
 
-const NavBar = ({ title, logoSrc, logoAlt, logoTitle }) => {
+const Navbar = ({ title, logoSrc, logoAlt, logoTitle }) => {
     const classNames = (...classes) => {
         return classes.filter(Boolean).join(' ');
     }
 
-    const [navBarItems, setNavBarItems] = React.useState([]);
+    const [navbarItems, setNavbarItems] = React.useState([]);
 
     React.useEffect(() => {
-        getNavBarItems(setNavBarItems);
+        getNavbarItems(setNavbarItems);
     }, []);
 
     return (
@@ -40,18 +40,18 @@ const NavBar = ({ title, logoSrc, logoAlt, logoTitle }) => {
                                     </Link>
                                     <div className='hidden sm:ml-10 sm:block'>
                                         <div className='flex space-x-4'>
-                                            {navBarItems
-                                                .map((navBarItem) => (
+                                            {navbarItems
+                                                .map((navbarItem) => (
                                                     <Link
-                                                        key={navBarItem.name}
-                                                        to={`/category/${navBarItem.name}`}
+                                                        key={navbarItem.name}
+                                                        to={`/category/${navbarItem.name}`}
                                                         className={classNames(
                                                             false ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-red-700 hover:text-white',
                                                             'px-3 py-2 rounded-md text-sm font-medium md:capitalize'
                                                         )}
                                                         aria-current={false ? 'page' : undefined}
                                                     >
-                                                        {navBarItem.name}
+                                                        {navbarItem.name}
                                                     </Link>
                                                 ))}
                                         </div>
@@ -66,18 +66,18 @@ const NavBar = ({ title, logoSrc, logoAlt, logoTitle }) => {
                         </div>
                         <Disclosure.Panel className='sm:hidden'>
                             <div className='space-y-1 px-2 pt-2 pb-3'>
-                                {navBarItems
-                                    .map((navBarItem) => (
+                                {navbarItems
+                                    .map((navbarItem) => (
                                         <Link
-                                            key={navBarItem.name}
-                                            to={`/category/${navBarItem.name}`}
+                                            key={navbarItem.name}
+                                            to={`/category/${navbarItem.name}`}
                                             className={classNames(
                                                 false ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                 'block px-3 py-2 rounded-md text-base font-medium'
                                             )}
                                             aria-current={false ? 'page' : undefined}
                                         >
-                                            {navBarItem.name}
+                                            {navbarItem.name}
                                         </Link>
                                     ))}
                             </div>
@@ -89,4 +89,4 @@ const NavBar = ({ title, logoSrc, logoAlt, logoTitle }) => {
     );
 }
 
-export default NavBar;
+export default Navbar;
