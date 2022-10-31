@@ -1,6 +1,9 @@
 # Pre Entrega 2 Nicolás Batista Piñeyro
 `CoderHouse - React.js`
+
+
 ![Demo](https://raw.githubusercontent.com/nicolas5746/PreEntrega2-Batista-Pineyro/master/public/images/demo.gif)
+
 
 [Deployed in Netlify](https://preentrega2nicolasbatista.netlify.app/)
 
