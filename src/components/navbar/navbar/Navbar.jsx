@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Disclosure, Menu } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import { getNavbarItems } from 'data/getData';
-import CartWidget from 'components/ui/cartWidget/CartWidget';
+import CartWidget from 'components/navbar/cartWidget/CartWidget';
 import './Navbar.sass';
 
 const Navbar = ({ title, logoSrc, logoAlt, logoTitle }) => {
