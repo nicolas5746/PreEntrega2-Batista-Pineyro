@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from 'components/ui/navbar/Navbar';
 import Home from 'screens/home/Home';
 import Product from 'screens/product/Product';
 import Cart from 'screens/cart/Cart';
@@ -8,6 +9,12 @@ const Router = () => {
     return (
         <div>
             <BrowserRouter>
+                <Navbar
+                    title={`Tienda Americana`}
+                    logoSrc={`https://raw.githubusercontent.com/nicolas5746/PreEntrega1-Batista-Pineyro/master/public/images/logo.png`}
+                    logoAlt={`Tienda Americana`}
+                    logoTitle={`Tienda Americana`}
+                />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
                     <Route path={`/category/:sortBy`} element={<Home />} />

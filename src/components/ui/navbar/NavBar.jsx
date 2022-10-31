@@ -11,7 +11,7 @@ const Navbar = ({ title, logoSrc, logoAlt, logoTitle }) => {
         return classes.filter(Boolean).join(' ');
     }
 
-    const [navbarItems, setNavbarItems] = React.useState([]);
+    const [items, setNavbarItems] = React.useState([]);
 
     React.useEffect(() => {
         getNavbarItems(setNavbarItems);
@@ -40,18 +40,18 @@ const Navbar = ({ title, logoSrc, logoAlt, logoTitle }) => {
                                     </Link>
                                     <div className='hidden sm:ml-10 sm:block'>
                                         <div className='flex space-x-4'>
-                                            {navbarItems
-                                                .map((navbarItem) => (
+                                            {items
+                                                .map((item) => (
                                                     <Link
-                                                        key={navbarItem.name}
-                                                        to={`/category/${navbarItem.name}`}
+                                                        key={item.name}
+                                                        to={`/category/${item.name}`}
                                                         className={classNames(
                                                             false ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-red-700 hover:text-white',
                                                             'px-3 py-2 rounded-md text-sm font-medium md:capitalize'
                                                         )}
                                                         aria-current={false ? 'page' : undefined}
                                                     >
-                                                        {navbarItem.name}
+                                                        {item.name}
                                                     </Link>
                                                 ))}
                                         </div>
@@ -66,18 +66,18 @@ const Navbar = ({ title, logoSrc, logoAlt, logoTitle }) => {
                         </div>
                         <Disclosure.Panel className='sm:hidden'>
                             <div className='space-y-1 px-2 pt-2 pb-3'>
-                                {navbarItems
-                                    .map((navbarItem) => (
+                                {items
+                                    .map((item) => (
                                         <Link
-                                            key={navbarItem.name}
-                                            to={`/category/${navbarItem.name}`}
+                                            key={item.name}
+                                            to={`/category/${item.name}`}
                                             className={classNames(
                                                 false ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                                                 'block px-3 py-2 rounded-md text-base font-medium'
                                             )}
                                             aria-current={false ? 'page' : undefined}
                                         >
-                                            {navbarItem.name}
+                                            {item.name}
                                         </Link>
                                     ))}
                             </div>
