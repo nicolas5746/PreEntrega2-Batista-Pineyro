@@ -1,47 +1,26 @@
 import React from 'react';
 import CartContext from './CartContext';
 
-export const CartContextProvider = ({ children }) => {
-    const [cart, setCart] = React.useState([]);
+export const CartContextProvider = ({ defaultValue = [], children }) => {
 
-    const addProduct = (itemCount) => {
-        if (cart.find((product) => product.id === itemCount.id)) {
-            const newCartItem = cart
-                .map((product) => {
-                    if (product.id === itemCount.id) {
-                        return { ...product, count: itemCount.count + product.count }
-                    }
-                    return product;
-                });
-            setCart(newCartItem);
-        } else {
-            setCart((count) => {
-                return [...count, itemCount];
-            })
+    const [cache, setCache] = React.useState(defaultValue);
+
+    const getFromCache = (id) => {
+        return cache.find(p => p.id === id);
+    }
+
+    const isInCache = (id) => {
+        return id === undefined ? undefined : getFromCache !== undefined;
+    }
+
+    const addToCache = (p) => {
+        if (isInCache(p && p.id)) {
+            return;
         }
+        setCache(...[cache, p]);
     }
 
-    const removeProduct = (itemCount) => {
-        const newItems = cart
-            .filter((product) => product.id !== itemCount.id);
-        setCart(newItems);
-    }
-
-    const fillCart = () => {
-        return cart.reduce((increase, product) => increase + product.count, 0);
-    }
-
-    const emptyCart = () => {
-        setCart([]);
-    }
-
-    const cartCost = () => {
-        const cost = cart
-            .reduce((increase, product) => increase + product.price * product.count, 0);
-        return cost;
-    }
-
-    const value = { cart, addProduct, removeProduct, fillCart, emptyCart , cartCost };
+    const value = { cache, addToCache, isInCache, cacheSize: cache.length };
 
     return (
         <CartContext.Provider
