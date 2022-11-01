@@ -6,7 +6,12 @@ import { getNavbarItems } from 'data/getData';
 import CartWidget from 'components/navbar/cartWidget/CartWidget';
 import './Navbar.sass';
 
-const Navbar = ({ title, logoSrc, logoAlt, logoTitle }) => {
+const Navbar = () => {
+    let title=`Tienda Americana`;
+    let logoSrc= `https://raw.githubusercontent.com/nicolas5746/PreEntrega1-Batista-Pineyro/master/public/images/logo.png`;
+    let logoAlt=`Tienda Americana`;
+    let logoTitle= `Tienda Americana`;
+    
     const classNames = (...classes) => {
         return classes.filter(Boolean).join(' ');
     }

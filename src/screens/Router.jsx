@@ -9,18 +9,13 @@ const Router = () => {
     return (
         <div>
             <BrowserRouter>
-                <Navbar
-                    title={`Tienda Americana`}
-                    logoSrc={`https://raw.githubusercontent.com/nicolas5746/PreEntrega1-Batista-Pineyro/master/public/images/logo.png`}
-                    logoAlt={`Tienda Americana`}
-                    logoTitle={`Tienda Americana`}
-                />
+                <Navbar />
                 <Routes>
                     <Route path={`/`} element={<Home />} />
                     <Route path={`/category/:sortBy`} element={<Home />} />
                     <Route path={`/product/:id`} element={<Product />} />
                     <Route path={`/cart`} element={<Cart />} />
-                    <Route path={`/*`} element={<NotFound backToHome={`Volver`} />} />
+                    <Route path={`/*`} element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </div>
